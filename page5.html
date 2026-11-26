@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OB Montessori Center | About Us</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f0eb;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #172337;
+}
+
+/* NAVBAR */
+
+.navbar {
+    padding: 10px 0;
+}
+
+.navbar-nav {
+    gap: 15px;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #0c2544;
+}
+
+/* HERO */
+
+.about-hero {
+    position: relative;
+    min-height: 350px;
+    background-image: url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.about-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(12, 25, 39, 0.92),
+        rgba(12, 25, 39, 0.55),
+        rgba(12, 25, 39, 0.1)
+    );
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 60px 10px;
+}
+
+.about-label {
+    letter-spacing: 5px;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.about-hero h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.about-hero-content > p:last-child {
+    font-size: 21px;
+    max-width: 650px;
+    line-height: 1.6;
+}
+
+/* PROJECT INTRO */
+
+.team-intro {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.team-intro-label {
+    color: #1c4474;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.team-intro h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 45px;
+    font-weight: bold;
+    color: #1c4474;
+    margin-bottom: 25px;
+}
+
+.team-intro p {
+    font-size: 19px;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: auto;
+    color: #444;
+}
+
+/* TEAM MEMBERS */
+
+.team-section {
+    padding: 20px 0 100px;
+}
+
+.team-card {
+    background-color: #faf8f5;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.team-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.team-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.team-content h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #1c4474;
+    margin-bottom: 10px;
+}
+
+.team-role {
+    color: #1c4474;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.team-content p:last-child {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* COLLABORATION */
+
+.collaboration {
+    background-color: #1c4474;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.collaboration-label {
+    letter-spacing: 5px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.collaboration h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.collaboration p {
+    font-size: 19px;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: auto;
+    color: #e1e8f0;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #1c4474;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+footer h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #e1e8f0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer-links h5 {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #e1e8f0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.4);
+    margin-top: 30px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+
+    .about-hero h1 {
+        font-size: 45px;
+    }
+
+    .team-intro h2 {
+        font-size: 40px;
+    }
+
+    .team-image {
+        height: 280px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .about-hero {
+        min-height: 300px;
+    }
+
+    .about-hero h1 {
+        font-size: 38px;
+    }
+
+    .about-hero-content > p:last-child {
+        font-size: 18px;
+    }
+
+    .team-intro {
+        padding: 50px 20px;
+    }
+
+    .team-intro h2 {
+        font-size: 35px;
+    }
+
+    .team-intro p {
+        font-size: 17px;
+    }
+
+    .team-section {
+        padding: 20px 20px 50px;
+    }
+
+    .team-image {
+        height: 350px;
+    }
+
+    .team-content h3 {
+        font-size: 27px;
+    }
+
+    .collaboration {
+        padding: 60px 20px;
+    }
+
+    .collaboration h2 {
+        font-size: 35px;
+    }
+
+    .collaboration p {
+        font-size: 17px;
+    }
+
+    .footer-links {
+        margin-top: 30px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #f3f0eb;">
+  <div class="container-fluid px-4">
+
+        <a class="navbar-brand" href="index-4.html">
+            <img src="https://scontent.fmnl25-2.fna.fbcdn.net/v/t1.15752-9/869470059_2218073918757856_2717501630165669285_n.png?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=fc17b8&_nc_ohc=uwfVXUWOLwoQ7kNvwEuZd99&_nc_oc=AdoJ24W-xp3k9bAfWMV5gxCddBEpHjiup3cp_wLwLwJDXSn9-ZuVLQcP6_-cdvCqbSoRa7AAGstY6eRbgE0VtY0Z&_nc_zt=23&_nc_ht=scontent.fmnl25-2.fna&_nc_ss=7b6a8&oh=03_Q7cD6wGZak2qltalo5Jei9Mi6SXz7uGmopUMG8w8Pe_bR3CJ_g&oe=6B127D97"
+            alt="OB Montessori Center Logo"
+            class="img-fluid"
+            style="height: 100px; width: 200px;">
+        </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index-4.html" style="color:#1c4474;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="page2-2.html" style="color:#1c4474;">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="enroll.html" style="color:#1c4474;">Enroll</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html" style="color:#1c4474;">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html" style="color:#1c4474;">About Us</a>
+        </li>
+      </ul>
+
+      <form class="d-flex">
+        <button class="btn btn-primary" type="button" style="background-color: #1c4474; border: 2px solid #1c4474; border-radius: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">My Portal</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="about-hero">
+
+    <div class="about-overlay"></div>
+
+    <div class="container about-hero-content">
+
+        <p class="about-label">THE PEOPLE BEHIND THE PROJECT</p>
+
+        <h1>Meet Our Team</h1>
+
+        <p>
+            Four minds, one vision, and a shared goal
+            of creating an informative and engaging website.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- TEAM INTRO -->
+
+<section class="team-intro">
+
+    <div class="container">
+
+        <p class="team-intro-label">ABOUT OUR GROUP</p>
+
+        <h2>The Team Behind the Website</h2>
+
+        <p>
+            We are a group of students who worked together to design
+            and develop this website. Through collaboration, creativity,
+            research, and teamwork, we created a digital platform
+            that presents information about OB Montessori Center
+            in an organized and accessible way.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- TEAM MEMBERS -->
+
+<section class="team-section">
+
+    <div class="container-fluid px-4">
+
+        <div class="row g-4">
+
+            <!-- MEMBER 1 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="team-card">
+
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+                    alt="Team member one"
+                    class="team-image">
+
+                    <div class="team-content">
+
+                        <h3>Member One</h3>
+
+                        <p class="team-role">DESIGNER</p>
+
+                        <p>
+                            Responsible for designing the visual
+                            elements and layout of the website,
+                            ensuring a consistent and engaging
+                            user experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MEMBER 2 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="team-card">
+
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+                    alt="Team member two"
+                    class="team-image">
+
+                    <div class="team-content">
+
+                        <h3>Member Two</h3>
+
+                        <p class="team-role">DEVELOPER</p>
+
+                        <p>
+                            Responsible for writing and organizing
+                            the code, building page structures,
+                            and implementing website features.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MEMBER 3 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="team-card">
+
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80"
+                    alt="Team member three"
+                    class="team-image">
+
+                    <div class="team-content">
+
+                        <h3>Member Three</h3>
+
+                        <p class="team-role">CONTENT CREATOR</p>
+
+                        <p>
+                            Responsible for creating, organizing,
+                            and preparing the information and
+                            written content presented on the website.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MEMBER 4 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="team-card">
+
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80"
+                    alt="Team member four"
+                    class="team-image">
+
+                    <div class="team-content">
+
+                        <h3>Member Four</h3>
+
+                        <p class="team-role">RESEARCHER</p>
+
+                        <p>
+                            Responsible for gathering information,
+                            checking details, and helping ensure
+                            the accuracy of the website's content.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- COLLABORATION -->
+
+<section class="collaboration">
+
+    <div class="container">
+
+        <p class="collaboration-label">WORKING TOGETHER</p>
+
+        <h2>Built Through Collaboration</h2>
+
+        <p>
+            This project reflects the combined effort, ideas,
+            and contributions of every member. By sharing
+            responsibilities, communicating, and working together,
+            we turned our ideas into a website that showcases
+            our creativity, skills, and teamwork.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <h3>OB Montessori Center</h3>
+
+                <p>Fairview Campus</p>
+
+                <p>
+                    Developing competence, character,
+                    and responsibility.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 footer-links">
+
+                <h5>Quick Links</h5>
+
+                <a href="index-4.html">Home</a>
+                <a href="page2-2.html">Courses</a>
+                <a href="enroll.html">Enroll</a>
+                <a href="contact.html">Contact Us</a>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            © 2026 OB Montessori Center. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
