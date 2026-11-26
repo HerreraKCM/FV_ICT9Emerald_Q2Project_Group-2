@@ -1,89 +1,700 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q2 Project Group2</title>
+    <title>OB Montessori Center Fairview</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+</head>
 <style>
-    h1 {
-        color: #1c4474;
-        background-color: #dc9951;
-        padding: 10px;
-        font-size: 36px;
-        font-weight: bold;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        text-align: center;
-    }
-    p {
-        color: #1c4474;
-        font-size: 18px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        text-align: center;
-        padding: 15px;               
-        width: 80%;                  
-        margin-left: auto;           
-        margin-right: auto;
-    }
-  .campus-img {
+
+body {
+    background-color: #f3f0eb;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #172337;
+}
+
+.navbar {
+    padding: 10px 0;
+}
+
+.navbar-nav {
+    gap: 15px;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #0c2544;
+}
+
+.portal-btn {
+    background-color: #1c4474;
+    border: 2px solid #1c4474;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 8px 22px;
+    transition: 0.3s;
+}
+
+.portal-btn:hover {
+    background-color: #123052;
+    border-color: #123052;
+}
+
+.hero {
+    position: relative;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    background-image: url("https://obmontessori.orangeapps.ph/landing/obmontessori/images/FV%20Facade.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(12, 25, 39, 0.92) 0%,
+        rgba(12, 25, 39, 0.72) 45%,
+        rgba(12, 25, 39, 0.15) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 65px 0;
+}
+
+.hero-label {
+    letter-spacing: 5px;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(40px, 5vw, 65px);
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 21px;
+    max-width: 500px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.apply-btn {
+    background-color: #f3f0eb;
+    color: #172337;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.apply-btn:hover {
+    background-color: white;
+    color: #1c4474;
+    transform: translateY(-2px);
+}
+
+.apply-btn i {
+    margin-left: 8px;
+}
+
+.learn-btn {
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.learn-btn:hover {
+    background-color: white;
+    color: #172337;
+}
+
+
+.quick-links {
+    padding: 45px 25px;
+    background-color: #f3f0eb;
+}
+
+.quick-link-item {
+    padding: 20px 25px;
+    position: relative;
+}
+
+.quick-link-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background-color: #c9c4bc;
+}
+
+.quick-icon {
+    font-size: 45px;
+    color: #1c4474;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.quick-link-item h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.quick-link-item p {
+    font-size: 17px;
+    color: #343434;
+    max-width: 280px;
+    margin: auto;
+    line-height: 1.4;
+}
+
+.news-section {
+    padding: 45px 0;
+    background-color: #faf8f5;
+}
+
+.news-section h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.news-column {
+    padding-right: 35px;
+}
+
+.news-card {
+    height: 100%;
+    transition: 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card img {
     width: 100%;
-    height: 230px;
+    height: 190px;
     object-fit: cover;
-  }
-  #foot {
-    background: #1c4474;
-    color: #a7580a;
-    text-align: center;
+    border-radius: 8px;
+}
+
+.news-content {
+    padding: 12px 5px;
+}
+
+.news-content h4 {
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.news-date {
+    font-size: 14px;
+    color: #666;
+}
+
+.events-column {
+    padding-left: 35px;
+    border-left: 1px solid #c9c4bc;
+}
+
+.event-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ded9d2;
+    transition: 0.3s;
+}
+
+.event-item:hover {
+    padding-left: 8px;
+}
+
+.event-date {
+    min-width: 70px;
+    height: 65px;
+    border-radius: 10px;
+    background-color: #ebe6de;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-date span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.event-date strong {
+    font-size: 23px;
+}
+
+.event-info {
+    flex-grow: 1;
+}
+
+.event-info h5 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.event-item i {
+    font-size: 20px;
+}
+
+.about-section {
+    padding: 80px 0;
+    background-color: #f3f0eb;
+}
+
+.about-image {
     width: 100%;
-    margin-top: auto;
-  }
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.section-label {
+    color: #1c4474;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.about-section h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-section p:not(.section-label) {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.about-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #1c4474;
+    padding: 12px 25px;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background-color: #123052;
+    color: white;
+}
+
+.about-btn i {
+    margin-left: 8px;
+}
+
+footer {
+    background-color: #1c4474;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+footer h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #e1e8f0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer-links h5 {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #e1e8f0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.4);
+    margin-top: 30px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+@media (max-width: 991px) {
+
+    .events-column {
+        margin-top: 40px;
+        padding-left: 15px;
+        border-left: none;
+    }
+
+    .news-column {
+        padding-right: 15px;
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+    .quick-link-item:not(:last-child)::after {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero-content {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+    .quick-links {
+        padding: 25px 15px;
+    }
+
+    .quick-link-item {
+        padding: 30px 15px;
+    }
+
+    .news-section {
+        padding: 35px 15px;
+    }
+
+    .news-section h2 {
+        font-size: 30px;
+    }
+
+    .news-card img {
+        height: 230px;
+    }
+
+    .about-section {
+        padding: 50px 20px;
+    }
+
+    .about-image {
+        height: 280px;
+    }
+
+    .about-section h2 {
+        font-size: 34px;
+    }
+
+    .footer-links {
+        margin-top: 30px;
+    }
+
+}
+
 </style>
-  </head>
-
 <body>
-<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #f3f0eb;">
-  <div class="container-fluid">
-     <a class="navbar-brand" href="#"><img src="https://scontent.fmnl25-2.fna.fbcdn.net/v/t1.15752-9/869470059_2218073918757856_2717501630165669285_n.png?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=fc17b8&_nc_ohc=uwfVXUWOLwoQ7kNvwEuZd99&_nc_oc=AdoJ24W-xp3k9bAfWMV5gxCddBEpHjiup3cp_wLxLwJDXSn9-ZuVLQcP6_-cdvCqbSoRa7QAGstY6eRbgE0VtY0Z&_nc_zt=23&_nc_ht=scontent.fmnl25-2.fna&_nc_ss=7b6a8&oh=03_Q7cD6wGZak2qltalo5Jei9Mi6SXz7uGmopUMG8w8Pe_bR3CJ_g&oe=6B127D97" alt="ob_logo" class="img-fluid" style="height: 100px; width: 200px;"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mynavbar">
-      <ul class="navbar-nav ms-auto" >
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color:#1c4474; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color:#1c4474; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Courses</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color:#1c4474; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Enroll</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color:#1c4474; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color:#1c4474; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">About Us</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <button class="btn btn-primary" type="button" style="background-color: #1c4474; border: 2px solid #1c4474; border-radius: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ">My Portal</button>
-      </form>
-    </div>
-  </div>
-</nav>
 
-<div class="container-fluid m-0 p-0">
-    <div class="row">
-        <div class="col">
-            <img src="https://github.com/HerreraKCM/FV_ICT9E_Q2Drill2_Herrera_Khiane/blob/main/Screen%20Recording%202026-10-27%20at%204.56.54%20PM.gif?raw=true" alt="obmc_header" class="img-fluid w-100 d-block" style="height: 400px; object-fit: cover; border-top: 5px solid #1c6274;">
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #f3f0eb;">
+    <div class="container-fluid px-4">
+
+        <a class="navbar-brand" href="#">
+            <img src="https://scontent.fmnl25-2.fna.fbcdn.net/v/t1.15752-9/869470059_2218073918757856_2717501630165669285_n.png?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=fc17b8&_nc_ohc=uwfVXUWOLwoQ7kNvwEuZd99&_nc_oc=AdoJ24W-xp3k9bAfWMV5gxCddBEpHjiup3cp_wLxLwJDXSn9-ZuVLQcP6_-cdvCqbSoRa7QAGstY6eRbgE0VtY0Z&_nc_zt=23&_nc_ht=scontent.fmnl25-2.fna&_nc_ss=7b6a8&oh=03_Q7cD6wGZak2qltalo5Jei9Mi6SXz7uGmopUMG8w8Pe_bR3CJ_g&oe=6B127D97"
+            alt="OB Montessori Center Logo"
+            class="img-fluid"
+            style="height: 100px; width: 200px;">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mynavbar">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home" style="color:#1c4474;">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#courses" style="color:#1c4474;">Courses</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#enroll" style="color:#1c4474;">Enroll</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact" style="color:#1c4474;">Contact Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about" style="color:#1c4474;">About Us</a>
+                </li>
+
+            </ul>
+
+            <form class="d-flex ms-sm-3 mt-2 mt-sm-0">
+                <button class="btn btn-primary portal-btn" type="button">
+                    My Portal
+                </button>
+            </form>
+
         </div>
     </div>
-</div>
-<br>
-<div class="container-fluid" id="about-us">
-        <h1>The Montessori Way</h1>
-            <p>A carefully prepared Montessori environment where children explore sensorial discovery, language, culture, math, and practical life, growing independence, focus, and joy in every step of their journey.</p>
-</div>
+</nav>
+
+
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <div class="row">
+            <div class="col-lg-7">
+
+                <p class="hero-label">WELCOME TO</p>
+
+                <h1>OB Montessori Center<br>Fairview</h1>
+
+                <p class="hero-description">
+                    Operation Brotherhood Montessori Center: The environment that will nurture the students' mind 🧠
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#enroll" class="btn apply-btn">
+                        Apply Now <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                    <a href="#about" class="btn learn-btn">
+                        Learn More
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="quick-links">
+
+    <div class="container-fluid">
+        <div class="row text-center">
+
+            <div class="col-md-3 quick-link-item" id="courses">
+
+                <i class="bi bi-mortarboard quick-icon"></i>
+
+                <h3>Courses</h3>
+
+                <p>
+                    From Elementary School to Senior High School 📚
+                </p>
+
+            </div>
+
+            <div class="col-md-3 quick-link-item">
+
+                <i class="bi bi-people quick-icon"></i>
+
+                <h3>Enrollment</h3>
+
+                <p>
+                    Enrollment for OBMC ✍️
+                </p>
+
+            </div>
+
+            <div class="col-md-3 quick-link-item" id="enroll">
+
+                <i class="bi bi-journal-text quick-icon"></i>
+
+                <h3>Contacts</h3>
+
+                <p>
+                    Our contacts for communication. 📞
+                </p>
+
+            </div>
+
+            <div class="col-md-3 quick-link-item">
+
+                <i class="bi bi-calendar-event quick-icon"></i>
+
+                <h3>About us</h3>
+
+                <p>
+                    Our wonderful group members. 🌟
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="about-section" id="about">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <img src="https://video.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/ad59fc82-6675-426d-a5bc-631090f2c732/thumbnail"
+                alt="School campus"
+                class="about-image">
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <p class="section-label">ABOUT OBMC!</p>
+
+                <h2>Operation Brotherhood Montessori Center</h2>
+
+                <p>
+                    OB Montessori Center  is a progressive, co-educational institution in the Philippines dedicated to nurturing self-developing, passionate, and independent students.
+                </p>
+
+                <a href="#contact" class="about-btn">
+                    Learn More About Us <i class="bi bi-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer id="contact">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <h3>OB Montessori Center</h3>
+
+                <p>
+                    Fairview Campus
+                </p>
+
+                <p>
+                    Developing competence, character,
+                    and responsibility.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 footer-links">
+
+                <h5>Quick Links</h5>
+
+                <a href="#home">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#enroll">Enroll</a>
+                <a href="#about">About Us</a>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            © 2026 OB Montessori Center. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+
